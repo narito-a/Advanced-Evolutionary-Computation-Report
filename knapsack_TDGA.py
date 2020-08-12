@@ -3,7 +3,7 @@
 
 __author__  = "narito amako"
 __version__ = "0.01"
-__date__    = "12  2020"
+__date__    = "12 August 2020"
 
 from td_selection import ThermoDynamicalSelection
 
@@ -83,9 +83,9 @@ def parents_select(pop, size):
 
 toolbox.register("evaluate", evalation)
 #一様交叉
-#toolbox.register("mate", tools.cxUniform, indpb=0.5)
+toolbox.register("mate", tools.cxUniform, indpb=0.5)
 #1点交叉
-toolbox.register("mate", tools.cxOnePoint)
+#toolbox.register("mate", tools.cxOnePoint)
 #2点交叉
 #toolbox.register("mate", tools.cxTwoPoints)
 toolbox.register("mutate", tools.mutFlipBit, indpb=0.02)
